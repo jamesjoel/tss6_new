@@ -1,0 +1,30 @@
+.bg-orange{
+    background-color: #FF6A3D;
+}
+.text-white{
+    color: #fff !important;
+}
+.bg-dark-blue{
+    background-color: #1A2238;
+}
+#menu .nav .nav-item .nav-link:hover{
+    background-color: #FF6A3D;
+}
+#menu .nav .nav-item .dropdown-menu{
+    background-color: #1A2238;
+}
+#menu .nav .nav-item .dropdown-menu .dropdown-item:hover{
+    background-color: #FF6A3D;
+    color: #fff;
+}
+.slider{
+    height: 350px;
+    background-color: #F4DB7D;
+}
+.border-orange{
+    border : 1px solid #FF6A3D !important;
+}
+.left-nav .nav .nav-item .nav-link:hover{
+    background-color: #1A2238;
+    color: #fff;
+}
