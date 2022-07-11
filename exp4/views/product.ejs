@@ -1,0 +1,29 @@
+<%- include('header') %>
+        <div class="container mt-4" style="min-height: 700px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Product Page</h3>
+                   
+                    <div class="row">
+                        <% pro.forEach((x)=>{ %>
+
+                        
+                        <div class="col-md-3 mt-4">
+                            <div class="card">
+                                <img src="/images/<%= x.image %>" class="card-img-top" style="height:200px"/>
+                                <div class="card-body">
+                                    <p><b><%= x.name %></b></p>
+                                    <small><%= x.price %></small>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-success btn-sm">buy</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+<%- include('footer') %>

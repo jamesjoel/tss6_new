@@ -1,0 +1,45 @@
+<%- include('header') %>
+        <div class="container mt-4" style="min-height: 700px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Contact Page</h3>
+                    <br />
+                    City : <select>
+                        <% city.forEach((x)=>{ %>
+                            <option><%= x %></option>
+                        <% }) %>
+                    </select>
+                    <Br />
+                    Date <select>
+                        <% for(var a = 1; a<=31; a++){ %>
+                                <option><%= a %></option>
+                        <% } %>
+                    </select>
+                    <br />
+                    <Br />
+                    Year <select>
+                        <% for(var b = 2022; b >= 1905; b--){ %>
+                                <option><%= b %></option>
+                        <% } %>
+                    </select>
+                    <Br/>
+                    <table class="table table-dark mt-4">
+                        <tr>
+                            <th>S.No.</th>
+                            <th>City Name</th>
+                        </tr>
+
+                        <% city.forEach((x, n)=>{ %>
+                            <tr>
+                                <td><%= n+1 %></td>
+                                <td><%= x %></td>
+                            </tr>
+                                                    
+                        <% }) %>
+
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+<%- include('footer') %>
