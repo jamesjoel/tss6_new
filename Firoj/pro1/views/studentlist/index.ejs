@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <!-- <link type="text/css" rel="stylesheet" href="/css/bootstrap.css" />
+        <script src="/js/jquery.js"></script>
+        <script src="/js/bootstrap.bundle.js"></script>
+         -->
+    </head>
+   <body>
+    <%- include("../include/header/index") %>
+      <h1 class="m-4">Students list</h1>
+     <a href="/student" class="btn btn-dark m-4"><h2 class="text-light">Back</h2></a>
+      <div class="container-fluid">
+        <div class="container">
+
+        
+      <table class="table table-primary table-bordered table-hover table-striped text-center">
+        <tr>
+            <th>S.no.</th>
+            <th>Name</th>
+            <th>Mobile no.</th>
+            <th>Class</th>
+            <th>city</th>
+        </tr>
+       <% result.forEach((x , n)=>{ %>
+         <tr>
+         <td><%= n+1 %></td>
+         <td><%= x.fullname %></td>
+         <td><%= x.number %></td>
+         <td><%= x.class %></td>
+         <td><%= x.city %></td>
+        
+       <% }) %>
+    </table>
+    </div>
+</div>
+    <%- include("../include/footer/index") %>
+    
+   </body>

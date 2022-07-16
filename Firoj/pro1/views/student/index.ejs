@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <!-- <link type="text/css" rel="stylesheet" href="/css/bootstrap.css" />
+        <script src="/js/jquery.js"></script>
+        <script src="/js/bootstrap.bundle.js"></script>
+         -->
+    </head>
+   <body>
+    <%- include("../include/header/index") %>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div>
+                <h1 class="m-4" style="float:left;">Students</h1>
+                <a href="/student_list" class="btn btn-dark m-4"><h2 class="text-light" style="float:right;"> Students list</h2 ></a>
+        </div>
+         <div class="row">
+                
+                <div class="col-md-8 offset-2  my-4">
+                    <form action="/student/submit" method="post">
+                        
+                <div class="card border border-primary">
+                    <div class="card-header bg-primary text-light text-center"><h1>Signup</h1></div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <labe>Full Name:</label>
+                                <input type="text" name="fullname" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <labe>Class:</label>
+                                <select name="class" class="form-control">
+                                    <option>Select</option>
+                                    <option>nursery</option>
+                                    <option>L.K.G.</option>
+                                    <option>U.K.G.</option>
+                                    <% for( var a = 1 ; a<=12; a++ ) { %>
+                                      <option><%= a %></option>
+                                    <% } %>
+                                </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Age:</label>
+                            <input type="number" class="form-control" name="age">
+                        </div>
+                        <div class="form-group">
+                            <labe>Email:</label>
+                                <input name="email" type="email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <labe>Mobile Number:</label>
+                                <input name="number" type="number" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <labe>Address:</label>
+                            <textarea name="address" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <labe>Gender :</label><br>
+                            <input type="radio" name="gender" value="Male"> Male <br>
+                            <input type="radio" name="gender" value="Female"> Female
+                        </div>
+                        <div class="form-group">
+                            <labe>Hobby:</label><br>
+                            <input name="hobby" type="checkbox" value="Cricket">Cricket <br>
+                            <input name="hobby" type="checkbox" value="Music">Music <br>
+                            <input name="hobby" type="checkbox" value="Driving">Driving <br>
+                            <input name="hobby" type="checkbox" value="Adventure">Adventure <br>
+                        </div>
+                        <div class="form-group">
+                            <labe>City:</label>
+                           <select name="city" class="form-control">
+                            <option>Select</option>
+                            <option>Agra</option>
+                            <option>Delhi</option>
+                            <option>Mumbai</option>
+                            <option>Bhopal</option>
+                            <option>Indore</option>
+                            <option>Gwalior</option>
+                            <option>Morena</option>
+                            <option>Hyderabad</option>
+                            <option>Chennai</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                            <labe>For MORE:</label><br>
+                           <input type="button" value="MORE" class="btn btn-primary">
+                        </div>
+                        <div class="form-group">
+                            <labe>Attech File:</label><br>
+                            <input type="file" />
+                        </div>
+                        <div class="form-group">
+                            <labe>Reset:</label><br>
+                            <input type="reset" value="CLEAR" class="btn btn-danger">
+                        </div>  
+                    </div>
+                    <div class="card-footer bg-primary">
+                        <input type="submit" class="btn btn-success">
+                    </div>
+                </div>
+            </form>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    <%- include("../include/footer/index") %>
+   </body>
