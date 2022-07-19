@@ -3,7 +3,7 @@ const app = express();
 
 const routes = require("./config/routes");
 app.use(express.static(__dirname+"/assets"));
-app.set("view engine", "ejs ");
+app.set("view engine", "ejs");
 // app.use(express.urlencoded());
 // app.use(express.json());
 
