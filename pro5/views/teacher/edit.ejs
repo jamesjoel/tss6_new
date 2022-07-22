@@ -1,0 +1,60 @@
+<div class="container" style="min-height: 700px;">
+    <h1>Edit Teacher Page</h1>
+    
+    <br />
+    <form action="/teacher/update" method="post">
+        <input type="hidden" name="id" value="<%= result._id %>" />
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-3">
+            <a href="/teacher" class="btn btn-info">Back</a>
+            
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="name" class="form-control" value="<%= result.name %>"/>
+            </div>
+            <div class="form-group">
+                <label>Salary</label>
+                <input type="text" name="salary" value="<%= result.salary %>" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Class</label>
+                <select class="form-control" name="class">
+                    <option>Select</option>
+                    <option <% if(result.class=='UKG'){ %> selected  <% } %>>UKG</option>
+                    <option <% if(result.class=='KG-I'){ %> selected  <% } %>>KG-I</option>
+                    <option <% if(result.class=='KG-II'){ %> selected  <% } %>>KG-II</option>
+                    <% for(var i=1; i<=12; i++){ %>
+                        <option <% if(result.class==i){ %> selected  <% } %>><%= i %></option>
+                    <% } %>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Address</label>
+                <textarea class="form-control" name="address"><%= result.address %></textarea>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <Br />
+                Male <input type="radio" <% if(result.gender=='male'){ %> checked  <% } %> value="male"  name="gender"/>
+                Female <input type="radio" <% if(result.gender=='female'){ %> checked  <% } %> value="female" name="gender"/>
+            </div>
+            <div class="form-group">
+                <label>City</label>
+                <select class="form-control" name="city">
+                    <option>Select</option>
+                    <option <% if(result.city=='Mumbai'){ %> selected  <% } %>>Mumbai</option>
+                    <option <% if(result.city=='Pune'){ %> selected  <% } %>>Pune</option>
+                    <option <% if(result.city=='Delhi'){ %> selected  <% } %>>Delhi</option>
+                    <option <% if(result.city=='Bhopal'){ %> selected  <% } %>>Bhopal</option>
+                </select>
+            </div>
+            <br />
+            <input type="submit" value="Update" class="btn btn-success" />
+            
+        </div>
+    </div>
+    </form>
+    
+</div>
+
+

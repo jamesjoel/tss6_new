@@ -8,6 +8,13 @@ app.set("view engine", "ejs");
 app.use(express.json())
 app.use(express.urlencoded({ extended : true }))
 
+app.use((req, res, next)=>{
+    // console.log(req.url);
+    res.locals.url = req.url;
+    
+
+    next();
+})
 
 app.use(routes);
 

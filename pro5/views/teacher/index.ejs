@@ -9,6 +9,7 @@
             <th>Name</th>
             <th>Salary</th>
             <th>Detail</th>
+            <th>Edit</th>
             <th>Delete</th>
             
         </tr>
@@ -18,6 +19,7 @@
                 <td><%= x.name %></td>
                 <td><%= x.salary %></td>
                 <td><a href="/teacher/detail/<%= x._id %>" class="btn btn-info btn-sm">Detail</a></td>
+                <td><a href="/teacher/edit/<%= x._id %>" class="btn btn-warning btn-sm">Edit</a></td>
                 <td><a href="/teacher/delete/<%= x._id %>" class="btn btn-sm btn-danger">Delete</a></td>
             
             </tr>
