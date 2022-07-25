@@ -30,7 +30,7 @@ routes.get("/detail/:a",(req,res)=>{
     MongoClient.connect(dbUrl,(err,con)=>{
         var db = con.db(dbName);
         db.collection(collName).find({_id : id}).toArray((err,result)=>{
-            console.log(result);
+            // console.log(result);
             var pagedata = {title : "Project page", pagename : "project/detail", result : result[0]};
             res.render("layout", pagedata);
         })
