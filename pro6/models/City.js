@@ -1,5 +1,5 @@
 const database = require("../config/database");
-const collName = "employee";
+const collName = "city";
 
 module.exports.search = (where, cb)=>{
    database((err, con)=>{
