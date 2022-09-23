@@ -1,0 +1,4 @@
+{"_id":{"$oid":"62da9829e7d356f95ff2a4b7"},"name":"Rohit Sharma","salary":7000,"class":"2","address":"M. G. Road","gender":"male","city":"Bhopal"}
+{"_id":{"$oid":"62da98c5e7d356f95ff2a4b8"},"name":"Jaya Verma","salary":8000,"class":"5","address":"sdfg sdfg sdfg sdfg","gender":"female","city":"Pune"}
+{"_id":{"$oid":"62da9b68919fbac5dfcbd0a0"},"name":"Amar","salary":10000,"class":"6","address":"palaysia","gender":"male","city":"Pune"}
+{"_id":{"$oid":"62da9d25919fbac5dfcbd0a1"},"name":"Gaurav","salary":7000,"class":"KG-I","address":"fg sdfg sdfg sdfg","gender":"male","city":"Pune"}
