@@ -1,0 +1,73 @@
+<div class="container" style="min-height: 800px;">
+    <div class="row">
+        <div class="col-md-6 offset-3">
+           <form [formGroup]="signupForm">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Create Account</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" [ngClass]="{'is-invalid' : signupForm.controls['fullname'].errors && check} " formControlName="fullname" class="form-control">
+                        <div *ngIf="signupForm.controls['fullname'].errors && check " class="text-danger">
+                            <small>Insert Your Full Name</small>
+                        </div>
+                        <br>
+                        <label>Email</label>
+                        <input type="email" [ngClass]="{'is-invalid' : signupForm.controls['email'].errors && check} " formControlName="email" class="form-control">
+                        <div *ngIf="signupForm.controls['email'].errors && check " class="text-danger">
+                            <small *ngIf="signupForm.controls['email'].errors['required']" >Insert Your Email Address</small>
+                            <small *ngIf="signupForm.controls['email'].errors['email']" > Email Address Is Not Correct</small>
+                        </div>
+                        <br>
+                        <label>Password</label>
+                        <input type="password" [ngClass]="{'is-invalid' : signupForm.controls['password'].errors && check} " formControlName="password" class="form-control">
+                        <div *ngIf="signupForm.controls['password'].errors && check " class="text-danger">
+                            <small>Insert Your Password</small>
+                        </div>
+                        <br>
+                        <label>Re-Password</label>
+                        <input type="password" [ngClass]="{'is-invalid' : signupForm.controls['re_password'].errors && check} " formControlName="re_password" class="form-control">
+                        <div *ngIf="signupForm.controls['re_password'].errors && check " class="text-danger">
+                            <small>Insert Your Re-Password</small>
+                        </div>
+                        <br>
+                        <label>Contact no.</label>
+                        <input type="text" [ngClass]="{'is-invalid' : signupForm.controls['contact'].errors && check} " formControlName="contact" class="form-control">
+                        <div *ngIf="signupForm.controls['contact'].errors && check " class="text-danger">
+                            <small>Insert Your Contact Number</small>
+                        </div>
+                        <br>
+                        <label>Address</label>
+                        <textarea [ngClass]="{'is-invalid' : signupForm.controls['address'].errors && check} " formControlName="address" class="form-control"></textarea>
+                        <div *ngIf="signupForm.controls['address'].errors && check " class="text-danger">
+                            <small>Insert Your Address</small>
+                        </div>
+                        <br>
+                        <label>Gender</label>
+                        <br>
+                        Male:<input type="radio" value="Male" formControlName="gender">
+                        Female:<input type="radio" value="Female" formControlName="gender">
+                        <div *ngIf="signupForm.controls['gender'].errors && check " class="text-danger">
+                            <small>Select Your Geneder</small>
+                        </div>
+                        <br>
+                        <label>City</label>
+                        <select [ngClass]="{'is-invalid' : signupForm.controls['city'].errors && check} " formControlName="city" class="form-control" >
+                            <option>Select</option>
+                            <option *ngFor="let c of allCity">{{ c.name }}</option>
+                        </select>
+                            <div *ngIf="signupForm.controls['city'].errors && check " class="text-danger">
+                                <small>Select Your City</small>
+                            </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                <button (click)="submit()" class="btn karl-btn"  type="submit">Signup</button>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>

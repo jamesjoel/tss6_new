@@ -1,0 +1,39 @@
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-4" >
+            <h3>{{id ? "Update" : "Add New"}} Product:</h3>
+            <form [formGroup]="proForm">
+            <div class="formgroup mt-4">
+                <label>Product Name</label>
+                <input type="text" class="form-control" [ngClass]="{'is-invalid' : this.proForm.controls['name'].errors && check}" formControlName="name">
+                 <br>
+                <label>Price</label>
+                <input type="text" class="form-control" [ngClass]="{'is-invalid' : this.proForm.controls['price'].errors && check}" formControlName="price">
+                 <br>
+                <label>Product Image</label>
+                <input type="file" class="form-control" #img  [ngClass]="{'is-invalid' : this.proForm.controls['image'].errors && check}" formControlName="image">
+                 <br>
+                <label>Discount</label>
+                <input type="text" class="form-control" [ngClass]="{'is-invalid' : this.proForm.controls['discount'].errors && check}" formControlName="discount">
+                 <br>
+                <label>Category</label>
+                <select type="text" class="form-control" [ngClass]="{'is-invalid' : this.proForm.controls['category'].errors && check}" formControlName="category">
+                 <option *ngFor="let c of allCate">{{ c.name }}</option>
+                </select>
+                  <br>
+                  <br>
+                  Add More Category:
+                   <a routerLink="/admin/category" class="btn btn-info">Add</a>
+                 <br>
+                 <br>
+                <label>Discription</label>
+                <textarea type="text" class="form-control" [ngClass]="{'is-invalid' : this.proForm.controls['discription'].errors && check}" formControlName="discription"></textarea>
+                 <br>
+                  <input type="submit" (click)="submit(img)" value="{{ id ? 'Update' : 'Add' }}" class="btn btn-primary mb-4">
+
+            </div>
+        </form>
+        </div>
+    </div>
+</div>

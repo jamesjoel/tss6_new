@@ -1,0 +1,59 @@
+<nav class="navbar bg-dark navbar-dark navbar-expand-sm">
+    <a class="navbar-brand" href="#">Admin pannel</a>
+    <button data-toggle="collapse" data-target="#menu" class="navbar-toggler">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="menu" class=" collapse navbar-collapse">
+   <ul *ngIf="_als.isLoggedIn()" class="nav navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link px-4" routerLink="/admin">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link px-4" routerLink="/admin/Dashboard">Dashboard</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link px-4" routerLink="/admin/users">Users</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link px-4" routerLink="/admin/city">Cities</a>
+        </li>
+        <li class="nav-item dropdown navbar-dropdown" >
+            <a  data-toggle="dropdown" class="nav-link px-4 dropdown-toggle"  >Product</a>
+              <div class="dropdown-menu">
+                    <a class="dropdown-item" routerLink="/admin/productList">LIST</a>
+                    <a class="dropdown-item" routerLink="/admin/productAdd">ADD</a>
+                </div>
+            
+        </li>
+        <li class="nav-item">
+            <a class="nav-link px-4" routerLink="/admin/category">Category</a>
+        </li>
+       
+        <li class="nav-item">
+            <a class="nav-link px-4" (click)="_als.loggedOut()" style="cursor: pointer;" >Logout</a>
+        </li>
+        <li class="nav-item dropdown navbar-dropdown">
+            <a data-toggle="dropdown" class="nav-link dropdown-toggle px-4" href="#">More</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Services</a>
+                <a class="dropdown-item" href="#">Inquiry</a>
+                <a class="dropdown-item" href="#">Contact</a>
+                <a class="dropdown-item" href="#">Replace</a>
+                <a class="dropdown-item" href="#">Help</a>
+                <a class="dropdown-item" href="#">FAQ</a>
+            </div>
+        
+        </li>
+    </ul>
+</div>
+    <div id="menu" class=" collapse navbar-collapse justify-content-end">
+<ul class="nav navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link px-4" href="#">Login</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link px-4" href="#">Create Account</a>
+    </li>
+</ul>
+</div>
+</nav>  

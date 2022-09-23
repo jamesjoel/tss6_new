@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>All Cities:</h1>
+             <br>
+             <table class="table table-dark table-striped table-hover table-bordered text-center">
+                <tr>
+                    <th>S.No.</th>
+                    <th>Name</th>
+                    <th>State</th>
+                </tr>
+                <tr *ngFor="let c of allCity; let n = index">
+                    <td>{{ n+1 }}</td>
+                    <td>{{ c.name }}</td>
+                    <td>{{ c.state }}</td>
+                </tr>
+             </table>
+
+        </div>
+    </div>
+</div>

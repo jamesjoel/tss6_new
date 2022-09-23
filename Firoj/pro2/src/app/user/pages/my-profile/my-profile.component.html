@@ -1,0 +1,35 @@
+<div class="container" style="min-height: 500px;">
+    <h3 class="text-dark"> MY PROFILE:</h3>
+    <br>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <table *ngIf="userInfo" class=" table table-info   table-bordered ">
+                <tr>
+                    <th>Full Name</th>
+                    <th>{{ userInfo.fullname | name : userInfo.gender | uppercase }}</th>
+                </tr>
+                <tr>
+                    <td>Email Address</td>
+                    <td>{{ userInfo.email }}</td>
+                </tr>
+                <tr>
+                    <td>Contact No.</td>
+                    <td>{{ userInfo.contact }}</td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>{{ userInfo.address }}</td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>{{ userInfo.gender }}</td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>{{ userInfo.city }}</td>
+                </tr>
+                
+            </table>
+        </div>
+    </div>
+</div>

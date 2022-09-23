@@ -1,0 +1,37 @@
+<div class="container" style="min-height: 500px;">
+    <div class="row">
+        <div class="col-md-6 offset-3">
+           <form [formGroup]="loginForm" >
+            <div class="card">
+                <div class="card-header">
+                    <h2>USER LOGIN</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Mobile no & Gmail</label>
+                        <input type="text" formControlName="email" [ngClass]="{'is-invalid' : loginForm.controls['email'].errors && check }" class="form-control">
+                         <div *ngIf="loginForm.controls['email'].errors && check " class="text-danger">
+                            <small  *ngIf="loginForm.controls['email'].errors['required'] && check ">Insert Your Email </small>
+                            <small  *ngIf="loginForm.controls['email'].errors['email'] && check ">Your Email Is Incorrect </small>
+                         </div>
+
+                        <br>
+                        <label>Password</label>
+                        <input type="password" formControlName="password"  [ngClass]="{'is-invalid' : loginForm.controls['password'].errors && check }" class="form-control">
+                        <div *ngIf="loginForm.controls['password'].errors && check " class="text-danger">
+                            <small  *ngIf="loginForm.controls['password'].errors['required'] && check ">Insert Your Password </small>
+                         </div>
+                   
+                    </div>
+                </div>
+                <div class="card-footer">
+                <button (click)="submit()" class="btn karl-btn" type="submit">Login</button>  <small  class="text-danger">{{ errMsg }} </small>
+                
+                   
+                
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
